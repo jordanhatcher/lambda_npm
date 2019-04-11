@@ -1,7 +1,7 @@
 provider "aws" {}
 
 module "lambda_npm" {
-  source             = "./lambda_npm"
+  source             = "../lambda_npm"
   function_name      = "jhatcher_example_function"
   function_directory = "./function_code"
   role               = "${aws_iam_role.iam_for_lambda.arn}"
